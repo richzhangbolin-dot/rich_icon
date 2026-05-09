@@ -1,0 +1,39 @@
+/* ─── Reset & 全局变量 ─────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:          #0f1117;
+  --surface:     #1a1d27;
+  --surface2:    #22263a;
+  --border:      #2e3347;
+  --accent:      #6366f1;
+  --accent-dim:  #4f52c8;
+  --text:        #e2e4f0;
+  --text-muted:  #7b809a;
+  --text-dim:    #4a4f6a;
+  --danger:      #ef4444;
+  --success:     #22c55e;
+  --radius:      10px;
+  --sidebar-w:   220px;
+  --topbar-h:    58px;
+  --trans:       0.18s ease;
+}
+
+html, body, #root {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── 滚动条 ───────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 99px; }
+
+/* ─── 通用工具 ─────────────────────────────────────────────── */
+button { cursor: pointer; border: none; background: none; color: inherit; font: inherit; }
+input  { outline: none; border: none; background: none; color: inherit; font: inherit; }

@@ -1,0 +1,98 @@
+/* ─── IconCard ────────────────────────────────────────────── */
+.icon-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 8px 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: border-color var(--trans), background var(--trans), transform var(--trans);
+  overflow: hidden;
+}
+
+.icon-card:hover {
+  border-color: var(--accent);
+  background: var(--surface2);
+  transform: translateY(-1px);
+}
+
+.icon-card--copied {
+  border-color: var(--success);
+}
+
+/* ── SVG 预览区 ── */
+.icon-card__preview {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+}
+
+.icon-card__preview svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+/* ── 名称 ── */
+.icon-card__name {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  width: 100%;
+  padding: 0 4px;
+}
+
+/* ── 复制 toast ── */
+.icon-card__toast {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--success);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+/* ── 悬停操作层 ── */
+.icon-card__actions {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity var(--trans);
+}
+.icon-card:hover .icon-card__actions { opacity: 1; }
+
+.icon-card__action-btn {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--trans);
+}
+
+.icon-card__action-btn--delete {
+  background: rgba(239, 68, 68, 0.15);
+  color: var(--danger);
+}
+.icon-card__action-btn--delete:hover { background: var(--danger); color: #fff; }

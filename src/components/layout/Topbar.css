@@ -1,0 +1,80 @@
+/* ─── Topbar ──────────────────────────────────────────────── */
+.topbar {
+  height: var(--topbar-h);
+  min-height: var(--topbar-h);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 20px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+
+/* ── Logo ── */
+.topbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.topbar__logo-icon {
+  font-size: 20px;
+  color: var(--accent);
+}
+
+.topbar__logo-text {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--text);
+  letter-spacing: -0.3px;
+}
+
+/* ── 搜索框 ── */
+.topbar__search {
+  flex: 1;
+  max-width: 420px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0 12px;
+  height: 36px;
+  transition: border-color var(--trans);
+}
+.topbar__search:focus-within { border-color: var(--accent); }
+
+.topbar__search-icon { font-size: 16px; color: var(--text-dim); flex-shrink: 0; }
+
+.topbar__search-input {
+  flex: 1;
+  font-size: 13px;
+  color: var(--text);
+}
+.topbar__search-input::placeholder { color: var(--text-dim); }
+
+.topbar__search-clear {
+  font-size: 11px;
+  color: var(--text-dim);
+  padding: 2px;
+  border-radius: 3px;
+  transition: color var(--trans);
+}
+.topbar__search-clear:hover { color: var(--text); }
+
+/* ── 上传按钮 ── */
+.topbar__upload-btn {
+  flex-shrink: 0;
+  height: 36px;
+  padding: 0 16px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: var(--radius);
+  font-size: 13px;
+  font-weight: 600;
+  transition: background var(--trans);
+}
+.topbar__upload-btn:hover { background: var(--accent-dim); }

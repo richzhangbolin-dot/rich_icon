@@ -1,0 +1,50 @@
+/* ─── App 根布局 ──────────────────────────────────────────── */
+.app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ── 主内容区（侧栏 + 网格）── */
+.app__body {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+/* ── 右侧图标区域 ── */
+.app__main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ── 内容头部：标题 + 计数 ── */
+.app__content-header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 18px 20px 0;
+  flex-shrink: 0;
+}
+
+.app__content-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.3px;
+}
+
+.app__content-count {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+/* ── 图标网格可滚动 ── */
+.app__main .icon-grid,
+.app__main .icon-grid__empty {
+  flex: 1;
+  overflow-y: auto;
+}
